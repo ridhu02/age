@@ -1,0 +1,80 @@
+body{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: linear-gradient(to
+     right, aqua, white, blue);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 1oovh;
+     margin: 0;
+    padding:0;
+
+}
+.box{
+    width: 500px;
+    height: 550px;
+    border: 2px solid black;
+    text-align: center;
+    padding: 30px;
+    margin: 150px;
+    background-color: azure;
+    border-radius: 15px;
+}
+h1{
+    margin-bottom: 20px;
+}
+
+input[type="date"]{
+    height: 20px;
+    width: 200px;
+    padding: 10px;
+    margin-top: 10%;
+}
+ 
+button{
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    background: blue;
+    cursor: pointer;
+}
+
+button.hover{
+    background: darkblue;
+}
+
+/*.option{
+    margin-top: 15px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 15px;
+}
+.option.input[type="checkbox"]{
+    /*width: 30px;
+    height: 30px; 
+    transform: scale(1.8);
+    cursor: pointer;
+}*/
+
+#result{
+    margin-top: 20px;
+    font-size: 18px;
+    color: rgb(90, 202, 212);
+}
+.option{
+    margin-top: 15px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 15px;
+}
+.option input[type="checkbox"]{
+    width: 30px;
+    height: 30px; 
+   
+    cursor: pointer;
+}

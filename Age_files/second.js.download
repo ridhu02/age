@@ -1,0 +1,61 @@
+function startAge(){
+    let interval;
+    clearInterval(interval);
+    calculateAge();
+    //chackbox is checked or not
+    if(document.getElementById("live").checked){
+        interval= setInterval(calculateAge, 1000);
+    }
+}
+
+function calculateAge(){
+    let dob = document.getElementById("dob").value;
+    let birthDate = new Date(dob);
+    let today= new Date();
+    let diff= today- birthDate;
+    let totalsecond = Math.floor(diff/ 1000);
+    let second= totalsecond % 60;
+    let totalminute = Math.floor(totalsecond/60);
+    let minute= totalminute % 60;
+    let totalhour= Math.floor(totalminute/60);
+    let hour= totalhour % 24 ;
+    //let day= Math.floor(hour/24);
+    let year= today.getFullYear()- birthDate.getFullYear();
+    let month= today.getMonth()- birthDate.getMonth();
+    let remainingDays= today.getDate()-birthDate.getDate();
+
+    if(remainingDays < 0){
+        month--;
+        remainingDays+= 30;
+    }
+    if(month < 0){
+        year--;
+        month+= 12;
+    }
+    document.getElementById("result").innerHTML = `
+    Your age is ❤️🎂🧿:<br>
+    Years : ${year}<br>
+    Months : ${month}<br>
+    Days : ${remainingDays}<br>
+    Hours : ${hour}<br>
+    Minuts : ${minute}<br>
+    Seconds : ${second}<br>
+
+`;
+
+if(dob== ""){
+    alert("Please enter DOB !!");
+    document.getElementById("result").innerHTML="";
+    return;
+}
+
+if(birthDate > today){
+    document.getElementById("result").innerHTML= "Invalid DOB !!";
+    alert("Invalid DOB !!")
+    
+    return;
+}
+
+
+}
+
